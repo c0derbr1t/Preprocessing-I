@@ -93,7 +93,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
   border: 0.5px solid lightgray;
@@ -142,4 +142,42 @@ html,
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+}
+body {
+  background-color: #FCE7CC;
+  margin: 1.75%;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+header .nav-container {
+  background-color: #243c42;
+  color: #F4F1E2;
+  width: 38%;
+  padding: 0;
+  border-radius: 25px;
+}
+header .nav-container span {
+  display: none;
+}
+header .nav-container nav {
+  display: flex;
+  justify-content: space-around;
+}
+header .nav-container .nav-link {
+  color: #F4F1E2;
+  text-decoration: none;
+  line-height: 2;
+  font-size: 1rem;
+}
+header .nav-container .nav-link:hover {
+  background-color: #0b2329;
+  border: 1px dashed #7F979C;
+  padding: 1%;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 25px;
 }

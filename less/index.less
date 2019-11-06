@@ -10,6 +10,7 @@
 @darkFontColor: #120C16;
 @mainBack: #FCE7CC;
 @featureBack: #7F979C;
+@darkBack: #243c42;
 
 // Mixins
 .center(){
@@ -37,6 +38,11 @@
 	justify-content: space-between;
 }
 
+.spaceEvenly(){
+	display: flex;
+	justify-content: space-evenly;
+}
+
 // Reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,7 +60,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 	// For arranging things
@@ -96,7 +102,52 @@ html, body {
 
 // Styling
 
+// Body
+body {
+	background-color: @mainBack;
+	margin: 1.75%;
+}
+// Navigation
 
+header {
+	.end();
+
+	.nav-container {
+
+		background-color: @darkBack;
+		color: @lightFontColor;
+		width: 38%;
+		padding: 0;
+		border-radius: 25px;
+
+			span {
+				display: none;
+			} // Ends span
+
+			nav {
+				.spaceAround();
+				
+			} // Ends nav
+
+			.nav-link {
+				color: @lightFontColor;
+				text-decoration: none;
+				line-height: 2;
+				font-size: 1rem;
+			} // Ends .nav-link
+
+			.nav-link:hover {
+				background-color: @darkBack - 25%;
+				border: 1px dashed @featureBack;
+				padding: 1%;
+				font-size: 1.1rem;
+				line-height: 1.1rem;
+				text-align: center;
+				font-weight: bold;
+				border-radius: 25px;
+			}
+	} // Ends .nav-container
+} // Ends header
 
 
 
