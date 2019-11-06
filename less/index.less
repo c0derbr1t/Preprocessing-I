@@ -3,7 +3,41 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+// Variables
+@lightFontColor: #F4F1E2;
+@darkFontColor: #120C16;
+@mainBack: #FCE7CC;
+@featureBack: #7F979C;
+
+// Mixins
+.center(){
+	display: flex;
+	justify-content: center;
+}
+
+.end(){
+	display: flex;
+	justify-content: flex-end;
+}
+
+.start(){
+	display: flex;
+	justify-content: flex-start;
+}
+
+.spaceAround(){
+	display: flex;
+	justify-content: space-around;
+}
+
+.spaceBetween(){
+	display: flex;
+	justify-content: space-between;
+}
+
+// Reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +57,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	// For arranging things
+	border: .5px solid lightgray;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -55,6 +91,12 @@ table {
 
 html, body {
 	height: 100%;
-
+	font-family: 'Montserrat', sans-serif;
 }
+
+// Styling
+
+
+
+
 
