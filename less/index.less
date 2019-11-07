@@ -12,6 +12,8 @@
 @featureBack: #7F979C;
 @darkBack: #243c42;
 @standardMargin: 1.75%;
+@increasedMargin: 5%;
+@decreasedMargin: 1%;
 
 // Mixins
 .center(){
@@ -126,6 +128,10 @@ html, body {
 // Body
 body {
 	margin: @standardMargin;
+
+	@media (min-width: 1680px) {
+		margin: @increasedMargin;
+	} // End @media 1680
 }
 
 // **Header
@@ -139,6 +145,11 @@ header {
 		width: 38%;
 		padding: 0.25%;
 		.radius();
+
+		@media (max-width: 500px){
+			width: 100%;
+			margin: 5% 0;
+		} // End @media 480
 
 			span {
 				display: none;
@@ -178,11 +189,25 @@ header {
 	.radius();
 	background-color: @featureBack;
 
+	@media (max-width: 500px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 99%;
+		margin: @decreasedMargin;
+	} // End @media 480
+
+
 		img {
 			width: 28%;
 			height: auto;
 			border-radius: 50%;
 			margin-left: @standardMargin*2.5;
+
+			@media (max-width: 500px) {
+				width: 50%;
+				margin-left: @decreasedMargin*2.5;
+			} // End @media 480
 		} // Ends img
 
 		.top-container {
@@ -194,12 +219,25 @@ header {
 					font-size: 3rem;
 					margin-bottom: @standardMargin/1.5;
 					padding-left: @standardMargin;
+
+					@media (max-width: 500px) {
+						text-align: center;
+						font-size: 2.5rem;
+						margin: @standardMargin;
+					} // End @media 480
 				} // Ends h1
 
 				h2 {
 					font-size: 1.9rem;
 					margin-bottom: @standardMargin*2;
 					padding-left: @standardMargin*4;
+
+					@media (max-width: 500px) {
+						text-align: center;
+						font-size: 1.7rem;
+						margin: @standardMargin @standardMargin @standardMargin*5;
+						padding-left:0;
+					} // End @media 480
 				} // Ends h2
 
 				#top-p-1 {
@@ -207,6 +245,12 @@ header {
 					padding: @standardMargin;
 					border-top: 0.75px solid #3D6670;
 					.radius();
+
+					@media (max-width: 500px) {
+						font-size: 1.7rem;
+						padding: 4% 5% 2%;
+						font-size: 1.1rem;
+					} // End @media 480
 				} // Ends #top-p-1
 
 				#top-p-2 {
@@ -214,6 +258,12 @@ header {
 					padding: @standardMargin;
 					border-bottom: 0.75px solid #3D6670;
 					.radius();
+
+					@media (max-width: 500px) {
+						font-size: 1.7rem;
+						padding: 2% 5% 4%;
+						font-size: 1.1rem;
+					} // End @media 480
 				} // Ends #top-p-2
 
 				.button-container {
@@ -240,6 +290,11 @@ header {
 		.radius();
 		font-size: 1.15rem;
 		padding: 2% 4%;
+
+		@media (max-width: 500px) {
+			font-size: 1.1rem;
+			padding: 5% 8%;
+		} // End @media 480
 	} // Ends button
 } // Ends .button-container
 
@@ -253,6 +308,11 @@ header {
 .middle-1 {
 	.spaceAround();
 
+	@media (max-width: 500px) {
+		flex-direction: column;
+		width: 100%;
+	} // End @media 480
+
 		.description {
 			width: 50%;
 			font-size: 1.1rem;
@@ -260,16 +320,31 @@ header {
 			.radius();
 			padding: @standardMargin;
 
+			@media (max-width: 500px) {
+				width: 100%;
+				padding: 5%;
+				margin-bottom: 5%;
+			} // End @media 480
+
 				h3 {
 					font-size: 1.15rem;
 					font-weight: bold;
 					margin-bottom: @standardMargin;
+
+					@media (max-width: 500px) {
+						margin-bottom: 0;
+					} // End @media 480
 				} // Ends h3
 
 				p {
 					padding-left: @standardMargin*3;
 					line-height: 1.15;
-				} // Ends p
+
+					@media (max-width: 500px) {
+						padding: 8%;
+						text-align: justify;
+					} // End @media 480
+				} // Ends p	
 		} // Ends .description
 
 		.skills-current {
@@ -279,11 +354,35 @@ header {
 			.radius();
 			padding: @standardMargin;
 
+			@media (max-width: 500px) {
+				width: 100%;
+				padding: 5%;
+			} // End @media 480
+
 				h3 {
 					font-size: 1.15rem;
 					font-weight: bold;
 					margin-bottom: @standardMargin*2.5;
+
+					@media (max-width: 500px) {
+						margin-bottom: 10%;
+					} // End @media 480
 				} // Ends h3
+
+				p {
+					// border-top: 1px dashed @featureBack;
+					border-bottom: 1px dashed @featureBack;
+					padding-left: @standardMargin*6;
+					line-height: 1.5;
+
+					@media (max-width: 500px) {
+						padding: 5% 8%;
+						margin: 3% 8%;
+						border: none;
+						text-align: justify;
+						line-height: 1.1;
+					} // End @media 480
+				} // Ends p
 		} // Ends .skills-current
 } // Ends .middle-1
 
@@ -293,14 +392,21 @@ header {
 		margin: 0;
 		padding: 0;
 		border-top: 1px dashed @featureBack;
+
+		p:nth-of-type(2), p:nth-of-type(4), p:nth-of-type(6), p:nth-of-type(8) {
+			background-color: @mainBack + 10%;
+		} // End of p:nth evens
+
+		p:nth-of-type(1), p:nth-of-type(3), p:nth-of-type(5), p:nth-of-type(7) {
+			background-color: @mainBack - 30%;
+		} // End of p:nth odds
+
+		@media (max-width: 500px) {
+			border: none;
+		} // End @media 480
 	} // Ends .skill-list
 
-	p {
-		// border-top: 1px dashed @featureBack;
-		border-bottom: 1px dashed @featureBack;
-		padding-left: @standardMargin*6;
-		line-height: 1.5;
-	} // Ends p
+	
 } // Ends .skills-current
 
 // **Future Skills
@@ -314,6 +420,10 @@ header {
 		h4 {
 			font-weight: bold;
 			font-size: 1.15rem;
+
+			@media (max-width: 500px){
+				margin-bottom: 8%;
+			} // Ends @media 480
 		} // Ends h4
 
 		.soon-container {
@@ -321,6 +431,10 @@ header {
 			flex-wrap: wrap;
 			align-items: space-around;
 			margin-top: @standardMargin;
+
+			@media (max-width: 500px){
+				margin: 0 1% 5%;
+			} // Ends @media 480
 
 				.skill-block{
 					.radius();
@@ -335,7 +449,11 @@ header {
 				.skill-block:hover {
 					transform: translate3D(0,-3px,0) scale(1.05);
 					background-color: rgba(127, 151, 156, .6);
-				}
+
+					@media (max-width: 500px) {
+						transform: translate3D(0,-1px,0) scale(0.95);
+					} // Ends @media 480
+				} // Ends .skill-block:hover
 		} // Ends .soon-container
 } // Ends .middle-2
 
@@ -346,17 +464,30 @@ header {
 	flex-direction: column;
 	align-items: center;
 	background-color: @mainBack - 25%;
-
 	.radius();
+
+	@media (max-width: 500px) {
+		background-color: @mainBack - 10%;
+		margin-bottom: 5%;
+	} // End @media 480
 
 		h4 {
 			align-self: flex-start;
 			font-size: 1.15rem;
 			font-weight: bold;
+
+			@media (max-width: 500px){
+				margin-bottom: 8%;
+			} // Ends @media 480
 		} // Ends h4
 	
 		table {
 			width: 90%;
+
+			@media (max-width: 500px) {
+				width: 100%;
+				margin-bottom: 4%;
+			} // End @media 480
 		} // Ends table
 } // Ends .history
 
@@ -366,11 +497,21 @@ table {
 
 	th {
 		padding: @standardMargin @standardMargin*2 0;
-	}
+
+		@media (max-width: 500px) {
+			padding: 0 0;
+		} // End @media 480
+	} // End th
 
 	td {
 		padding: 0 @standardMargin*2;
-	}
+
+		@media (max-width: 500px) {
+			padding: 0 2%;
+			vertical-align: middle;
+		} // End @media 480
+	} // End td
+
 	.row-h {
 		font-weight: bolder;
 		font-size: 1.05rem;
@@ -381,7 +522,10 @@ table {
 	.row-1 {
 		.rowSize();
 		background-color: @mainBack - 10%;
-		
+
+		@media (max-width: 500px){
+			background-color: @mainBack + 10%;
+		} // Ends @media 480
 	} // Ends .row-1
 
 	.row-2 {
@@ -392,6 +536,10 @@ table {
 	.row-3 {
 		.rowSize();
 		background-color: @mainBack - 10%;
+
+		@media (max-width: 500px){
+			background-color: @mainBack + 10%;
+		} // Ends @media 480
 	} // Ends .row-3
 
 	.row-4 {
@@ -401,35 +549,35 @@ table {
 
 	.col-1 {
 		width: 35%;
+
+		@media (max-width: 500px) {
+			width: 40%;
+		} // End @media 480
 	} // Ends .col-1
 
 	.col-2 {
 		width: 50%;
+
+		@media (max-width: 500px) {
+			width: 45%;
+		} // End @media 480
 	} // Ends .col-2
 
 	.col-3 {
 		width: 15%;
+
+		@media (max-width: 500px) {
+			width: 15%;
+			text-align: center;
+		} // End @media 480
 	} // Ends .col-3
 } // Ends table
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // **Footer
 footer {
 	.end();
 	margin-top: @standardMargin;
+	margin-bottom: @standardMargin;
 	
 		.foot-content {
 			background-color: @darkBack;
@@ -440,22 +588,27 @@ footer {
 			.spaceEvenly();
 			align-items: center;
 
+			@media (max-width: 500px){
+				width: 100%;
+				margin-bottom: 5%;
+			}
+
 				p {
 					font-style: italic;
 					line-height: 2;
 					font-size: 0.90rem;
 				} // Ends p
 
-				a {
-					color: @lightFontColor;
-					text-decoration: none;
-					line-height: 2;
-					font-size: 1rem;
-					padding: 0 1.5%;
-				} // Ends a
+				// a {
+				// 	color: @lightFontColor;
+				// 	text-decoration: none;
+				// 	line-height: 2;
+				// 	font-size: 1rem;
+				// 	padding: 0 1.5%;
+				// } // Ends a
 
-				a:hover {
-					.hover();
-				} // Ends a:hover
+				// a:hover {
+				// 	.hover();
+				// } // Ends a:hover
 		} // Ends .foot-content
 } // Ends footer
