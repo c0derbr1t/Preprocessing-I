@@ -58,6 +58,11 @@
 	border-radius: 25px;
 }
 
+.rowSize(){
+	font-size: 1rem;
+	line-height: 2;
+}
+
 
 // Reset
 html, body, div, span, applet, object, iframe,
@@ -120,7 +125,6 @@ html, body {
 
 // Body
 body {
-
 	margin: @standardMargin;
 }
 
@@ -299,7 +303,114 @@ header {
 	} // Ends p
 } // Ends .skills-current
 
+// **Future Skills
+.middle-2 {
+	width: 100%;
+	background-color: @mainBack - 10%;
+	margin: @standardMargin 0;
+	padding: @standardMargin;
+	.radius();
 
+		h4 {
+			font-weight: bold;
+			font-size: 1.15rem;
+		} // Ends h4
+
+		.soon-container {
+			.spaceAround();
+			flex-wrap: wrap;
+			align-items: space-around;
+			margin-top: @standardMargin;
+
+				.skill-block{
+					.radius();
+					margin: 0.5%;
+					padding: 0.5% 1.5%;
+					background-color: rgba(127, 151, 156, .3);
+					line-height: 1.5;
+					font-size: 0.9rem;
+					font-style: italic;
+				}// Ends .skill-block
+
+				.skill-block:hover {
+					transform: translate3D(0,-3px,0) scale(1.05);
+					background-color: rgba(127, 151, 156, .6);
+				}
+		} // Ends .soon-container
+} // Ends .middle-2
+
+// **History
+.history {
+	padding: @standardMargin @standardMargin*3;
+	.spaceAround();
+	flex-direction: column;
+	align-items: center;
+	background-color: @mainBack - 25%;
+
+	.radius();
+
+		h4 {
+			align-self: flex-start;
+			font-size: 1.15rem;
+			font-weight: bold;
+		} // Ends h4
+	
+		table {
+			width: 90%;
+		} // Ends table
+} // Ends .history
+
+table {
+	border-bottom: 1px solid @featureBack - 25%;
+	text-align: left;
+
+	th {
+		padding: @standardMargin @standardMargin*2 0;
+	}
+
+	td {
+		padding: 0 @standardMargin*2;
+	}
+	.row-h {
+		font-weight: bolder;
+		font-size: 1.05rem;
+		line-height: 1.75;
+		border-bottom: 2.5px solid @featureBack - 25%;
+	} // Ends .row-h
+
+	.row-1 {
+		.rowSize();
+		background-color: @mainBack - 10%;
+		
+	} // Ends .row-1
+
+	.row-2 {
+		.rowSize();
+		background-color: @mainBack - 30%;
+	} // Ends .row-2
+
+	.row-3 {
+		.rowSize();
+		background-color: @mainBack - 10%;
+	} // Ends .row-3
+
+	.row-4 {
+		.rowSize();
+		background-color: @mainBack - 30%;
+	} // Ends .row-4
+
+	.col-1 {
+		width: 35%;
+	} // Ends .col-1
+
+	.col-2 {
+		width: 50%;
+	} // Ends .col-2
+
+	.col-3 {
+		width: 15%;
+	} // Ends .col-3
+} // Ends table
 
 
 

@@ -296,6 +296,99 @@ header .nav-container .nav-link:hover {
   padding-left: 10.5%;
   line-height: 1.5;
 }
+.middle-2 {
+  width: 100%;
+  background-color: #f2ddc2;
+  margin: 1.75% 0;
+  padding: 1.75%;
+  border-radius: 25px;
+}
+.middle-2 h4 {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.middle-2 .soon-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: space-around;
+  margin-top: 1.75%;
+}
+.middle-2 .soon-container .skill-block {
+  border-radius: 25px;
+  margin: 0.5%;
+  padding: 0.5% 1.5%;
+  background-color: rgba(127, 151, 156, 0.3);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.middle-2 .soon-container .skill-block:hover {
+  transform: translate3D(0, -3px, 0) scale(1.05);
+  background-color: rgba(127, 151, 156, 0.6);
+}
+.history {
+  padding: 1.75% 5.25%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e3ceb3;
+  border-radius: 25px;
+}
+.history h4 {
+  align-self: flex-start;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+.history table {
+  width: 90%;
+}
+table {
+  border-bottom: 1px solid #667e83;
+  text-align: left;
+}
+table th {
+  padding: 1.75% 3.5% 0;
+}
+table td {
+  padding: 0 3.5%;
+}
+table .row-h {
+  font-weight: bolder;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  border-bottom: 2.5px solid #667e83;
+}
+table .row-1 {
+  font-size: 1rem;
+  line-height: 2;
+  background-color: #f2ddc2;
+}
+table .row-2 {
+  font-size: 1rem;
+  line-height: 2;
+  background-color: #dec9ae;
+}
+table .row-3 {
+  font-size: 1rem;
+  line-height: 2;
+  background-color: #f2ddc2;
+}
+table .row-4 {
+  font-size: 1rem;
+  line-height: 2;
+  background-color: #dec9ae;
+}
+table .col-1 {
+  width: 35%;
+}
+table .col-2 {
+  width: 50%;
+}
+table .col-3 {
+  width: 15%;
+}
 footer {
   display: flex;
   justify-content: flex-end;
