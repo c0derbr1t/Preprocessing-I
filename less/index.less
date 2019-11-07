@@ -51,8 +51,11 @@
 	transform: translate3D(0,-1px,0) scale(1.05);
 	text-align: center;
 	font-weight: bold;
-	border-radius: 25px;
+	.radius();
+}
 
+.radius(){
+	border-radius: 25px;
 }
 
 
@@ -120,8 +123,8 @@ body {
 
 	margin: @standardMargin;
 }
-// **Header
 
+// **Header
 header {
 	.end();
 	margin-bottom: @standardMargin;
@@ -131,7 +134,7 @@ header {
 		color: @lightFontColor;
 		width: 38%;
 		padding: 0.25%;
-		border-radius: 25px;
+		.radius();
 
 			span {
 				display: none;
@@ -160,14 +163,15 @@ header {
 // **Main Content
 .main {
 	background-color: @mainBack;
-	border-radius: 25px;
+	.radius();
 } // Ends .main
 
+// **First Section
 .first-section {
 	.spaceBetween();
 	align-items: center;
 	padding: @standardMargin;
-	border-radius: 25px;
+	.radius();
 	background-color: @featureBack;
 
 		img {
@@ -198,14 +202,14 @@ header {
 					font-size: 1.25rem;
 					padding: @standardMargin;
 					border-top: 0.75px solid #3D6670;
-					border-radius: 25px;
+					.radius();
 				} // Ends #top-p-1
 
 				#top-p-2 {
 					font-size: 1.25rem;
 					padding: @standardMargin;
 					border-bottom: 0.75px solid #3D6670;
-					border-radius: 25px;
+					.radius();
 				} // Ends #top-p-2
 
 				.button-container {
@@ -229,23 +233,71 @@ header {
 	button {
 		background-color: @darkBack;
 		color: @lightFontColor;
-		border-radius: 25px;
+		.radius();
 		font-size: 1.15rem;
 		padding: 2% 4%;
-	}
-
+	} // Ends button
 } // Ends .button-container
-// button {
-// 	background-color: @darkBack;
-// 	color: @lightFontColor;
-// 	border-radius: 25px;
-// 	font-size: 1.25rem;
-// 	width: 
-// 	margin-top: @standardMargin*5;
-// 	padding: 1%;
 
-// } // Ends button
+// **Info
+.info {
+	.spaceBetween();
+	flex-direction: column;
+	margin: @standardMargin*2;
+} // Ends .info
 
+.middle-1 {
+	.spaceAround();
+
+		.description {
+			width: 50%;
+			font-size: 1.1rem;
+			background-color: @mainBack - 10%;
+			.radius();
+			padding: @standardMargin;
+
+				h3 {
+					font-size: 1.15rem;
+					font-weight: bold;
+					margin-bottom: @standardMargin;
+				} // Ends h3
+
+				p {
+					padding-left: @standardMargin*3;
+					line-height: 1.15;
+				} // Ends p
+		} // Ends .description
+
+		.skills-current {
+			width: 25%;
+			font-size: 1.1rem;
+			background-color: @mainBack - 10%;
+			.radius();
+			padding: @standardMargin;
+
+				h3 {
+					font-size: 1.15rem;
+					font-weight: bold;
+					margin-bottom: @standardMargin*2.5;
+				} // Ends h3
+		} // Ends .skills-current
+} // Ends .middle-1
+
+.skills-current {
+
+	.skill-list {
+		margin: 0;
+		padding: 0;
+		border-top: 1px dashed @featureBack;
+	} // Ends .skill-list
+
+	p {
+		// border-top: 1px dashed @featureBack;
+		border-bottom: 1px dashed @featureBack;
+		padding-left: @standardMargin*6;
+		line-height: 1.5;
+	} // Ends p
+} // Ends .skills-current
 
 
 
@@ -273,13 +325,14 @@ footer {
 			color: @lightFontColor;
 			width: 38%;
 			padding: 0.25%;
-			border-radius: 25px;
+			.radius();
 			.spaceEvenly();
 			align-items: center;
 
 				p {
 					font-style: italic;
 					line-height: 2;
+					font-size: 0.90rem;
 				} // Ends p
 
 				a {

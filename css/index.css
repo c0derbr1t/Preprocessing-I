@@ -248,6 +248,54 @@ header .nav-container .nav-link:hover {
   font-size: 1.15rem;
   padding: 2% 4%;
 }
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 3.5%;
+}
+.middle-1 {
+  display: flex;
+  justify-content: space-around;
+}
+.middle-1 .description {
+  width: 50%;
+  font-size: 1.1rem;
+  background-color: #f2ddc2;
+  border-radius: 25px;
+  padding: 1.75%;
+}
+.middle-1 .description h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 1.75%;
+}
+.middle-1 .description p {
+  padding-left: 5.25%;
+  line-height: 1.15;
+}
+.middle-1 .skills-current {
+  width: 25%;
+  font-size: 1.1rem;
+  background-color: #f2ddc2;
+  border-radius: 25px;
+  padding: 1.75%;
+}
+.middle-1 .skills-current h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 4.375%;
+}
+.skills-current .skill-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px dashed #7F979C;
+}
+.skills-current p {
+  border-bottom: 1px dashed #7F979C;
+  padding-left: 10.5%;
+  line-height: 1.5;
+}
 footer {
   display: flex;
   justify-content: flex-end;
@@ -266,6 +314,7 @@ footer .foot-content {
 footer .foot-content p {
   font-style: italic;
   line-height: 2;
+  font-size: 0.9rem;
 }
 footer .foot-content a {
   color: #F4F1E2;
