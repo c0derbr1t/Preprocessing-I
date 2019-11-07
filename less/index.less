@@ -149,7 +149,7 @@ header {
 		@media (max-width: 500px){
 			width: 100%;
 			margin: 5% 0;
-		} // End @media 480
+		} // End @media 500
 
 			span {
 				display: none;
@@ -179,6 +179,12 @@ header {
 .main {
 	background-color: @mainBack;
 	.radius();
+	padding-bottom: 1%;
+
+	@media (min-width: 1680px) {
+		margin: @increasedMargin;
+		padding-bottom: 1.5%;
+	} // End @media 1680
 } // Ends .main
 
 // **First Section
@@ -195,7 +201,7 @@ header {
 		align-items: center;
 		width: 99%;
 		margin: @decreasedMargin;
-	} // End @media 480
+	} // End @media 500
 
 
 		img {
@@ -207,7 +213,7 @@ header {
 			@media (max-width: 500px) {
 				width: 50%;
 				margin-left: @decreasedMargin*2.5;
-			} // End @media 480
+			} // End @media 500
 		} // Ends img
 
 		.top-container {
@@ -224,7 +230,7 @@ header {
 						text-align: center;
 						font-size: 2.5rem;
 						margin: @standardMargin;
-					} // End @media 480
+					} // End @media 500
 				} // Ends h1
 
 				h2 {
@@ -237,7 +243,7 @@ header {
 						font-size: 1.7rem;
 						margin: @standardMargin @standardMargin @standardMargin*5;
 						padding-left:0;
-					} // End @media 480
+					} // End @media 500
 				} // Ends h2
 
 				#top-p-1 {
@@ -250,7 +256,7 @@ header {
 						font-size: 1.7rem;
 						padding: 4% 5% 2%;
 						font-size: 1.1rem;
-					} // End @media 480
+					} // End @media 500
 				} // Ends #top-p-1
 
 				#top-p-2 {
@@ -263,7 +269,7 @@ header {
 						font-size: 1.7rem;
 						padding: 2% 5% 4%;
 						font-size: 1.1rem;
-					} // End @media 480
+					} // End @media 500
 				} // Ends #top-p-2
 
 				.button-container {
@@ -282,6 +288,10 @@ header {
 		margin: 10% 10% 0;
 		width: 50%;
 		text-align: center;
+
+		@media (max-width: 500px){
+			width: 75%;
+		} // Ends @media 500
 	} // Ends a
 
 	button {
@@ -294,7 +304,7 @@ header {
 		@media (max-width: 500px) {
 			font-size: 1.1rem;
 			padding: 5% 8%;
-		} // End @media 480
+		} // End @media 500
 	} // Ends button
 } // Ends .button-container
 
@@ -303,6 +313,7 @@ header {
 	.spaceBetween();
 	flex-direction: column;
 	margin: @standardMargin*2;
+
 } // Ends .info
 
 .middle-1 {
@@ -311,7 +322,7 @@ header {
 	@media (max-width: 500px) {
 		flex-direction: column;
 		width: 100%;
-	} // End @media 480
+	} // End @media 500
 
 		.description {
 			width: 50%;
@@ -320,11 +331,21 @@ header {
 			.radius();
 			padding: @standardMargin;
 
+			p:nth-of-type(2) {
+				font-style: italic;
+				font-weight: bold;
+			} // End p:nth 
+
 			@media (max-width: 500px) {
 				width: 100%;
 				padding: 5%;
 				margin-bottom: 5%;
-			} // End @media 480
+
+				p:nth-of-type(2) {
+					font-style: italic;
+					font-weight: bold;
+				} // End p:nth 
+			} // End @media 500
 
 				h3 {
 					font-size: 1.15rem;
@@ -333,17 +354,19 @@ header {
 
 					@media (max-width: 500px) {
 						margin-bottom: 0;
-					} // End @media 480
+					} // End @media 500
 				} // Ends h3
 
 				p {
 					padding-left: @standardMargin*3;
 					line-height: 1.15;
+					margin-bottom: 2%;
 
 					@media (max-width: 500px) {
 						padding: 8%;
 						text-align: justify;
-					} // End @media 480
+						margin-bottom: 3%;
+					} // End @media 500
 				} // Ends p	
 		} // Ends .description
 
@@ -357,7 +380,7 @@ header {
 			@media (max-width: 500px) {
 				width: 100%;
 				padding: 5%;
-			} // End @media 480
+			} // End @media 500
 
 				h3 {
 					font-size: 1.15rem;
@@ -366,7 +389,7 @@ header {
 
 					@media (max-width: 500px) {
 						margin-bottom: 10%;
-					} // End @media 480
+					} // End @media 500
 				} // Ends h3
 
 				p {
@@ -381,7 +404,7 @@ header {
 						border: none;
 						text-align: justify;
 						line-height: 1.1;
-					} // End @media 480
+					} // End @media 500
 				} // Ends p
 		} // Ends .skills-current
 } // Ends .middle-1
@@ -403,7 +426,7 @@ header {
 
 		@media (max-width: 500px) {
 			border: none;
-		} // End @media 480
+		} // End @media 500
 	} // Ends .skill-list
 
 	
@@ -423,7 +446,7 @@ header {
 
 			@media (max-width: 500px){
 				margin-bottom: 8%;
-			} // Ends @media 480
+			} // Ends @media 500
 		} // Ends h4
 
 		.soon-container {
@@ -434,7 +457,7 @@ header {
 
 			@media (max-width: 500px){
 				margin: 0 1% 5%;
-			} // Ends @media 480
+			} // Ends @media 500
 
 				.skill-block{
 					.radius();
@@ -452,7 +475,7 @@ header {
 
 					@media (max-width: 500px) {
 						transform: translate3D(0,-1px,0) scale(0.95);
-					} // Ends @media 480
+					} // Ends @media 500
 				} // Ends .skill-block:hover
 		} // Ends .soon-container
 } // Ends .middle-2
@@ -469,7 +492,7 @@ header {
 	@media (max-width: 500px) {
 		background-color: @mainBack - 10%;
 		margin-bottom: 5%;
-	} // End @media 480
+	} // End @media 500
 
 		h4 {
 			align-self: flex-start;
@@ -478,7 +501,7 @@ header {
 
 			@media (max-width: 500px){
 				margin-bottom: 8%;
-			} // Ends @media 480
+			} // Ends @media 500
 		} // Ends h4
 	
 		table {
@@ -487,7 +510,7 @@ header {
 			@media (max-width: 500px) {
 				width: 100%;
 				margin-bottom: 4%;
-			} // End @media 480
+			} // End @media 500
 		} // Ends table
 } // Ends .history
 
@@ -500,7 +523,7 @@ table {
 
 		@media (max-width: 500px) {
 			padding: 0 0;
-		} // End @media 480
+		} // End @media 500
 	} // End th
 
 	td {
@@ -509,7 +532,7 @@ table {
 		@media (max-width: 500px) {
 			padding: 0 2%;
 			vertical-align: middle;
-		} // End @media 480
+		} // End @media 500
 	} // End td
 
 	.row-h {
@@ -525,7 +548,7 @@ table {
 
 		@media (max-width: 500px){
 			background-color: @mainBack + 10%;
-		} // Ends @media 480
+		} // Ends @media 500
 	} // Ends .row-1
 
 	.row-2 {
@@ -539,7 +562,7 @@ table {
 
 		@media (max-width: 500px){
 			background-color: @mainBack + 10%;
-		} // Ends @media 480
+		} // Ends @media 500
 	} // Ends .row-3
 
 	.row-4 {
@@ -552,7 +575,7 @@ table {
 
 		@media (max-width: 500px) {
 			width: 40%;
-		} // End @media 480
+		} // End @media 500
 	} // Ends .col-1
 
 	.col-2 {
@@ -560,7 +583,7 @@ table {
 
 		@media (max-width: 500px) {
 			width: 45%;
-		} // End @media 480
+		} // End @media 500
 	} // Ends .col-2
 
 	.col-3 {
@@ -569,7 +592,7 @@ table {
 		@media (max-width: 500px) {
 			width: 15%;
 			text-align: center;
-		} // End @media 480
+		} // End @media 500
 	} // Ends .col-3
 } // Ends table
 

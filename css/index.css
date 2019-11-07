@@ -195,6 +195,13 @@ header .nav-container .nav-link:hover {
 .main {
   background-color: #FCE7CC;
   border-radius: 25px;
+  padding-bottom: 1%;
+}
+@media (min-width: 1680px) {
+  .main {
+    margin: 5%;
+    padding-bottom: 1.5%;
+  }
 }
 .first-section {
   display: flex;
@@ -296,6 +303,11 @@ header .nav-container .nav-link:hover {
   width: 50%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .button-container a {
+    width: 75%;
+  }
+}
 .button-container button {
   background-color: #243c42;
   color: #F4F1E2;
@@ -332,11 +344,19 @@ header .nav-container .nav-link:hover {
   border-radius: 25px;
   padding: 1.75%;
 }
+.middle-1 .description p:nth-of-type(2) {
+  font-style: italic;
+  font-weight: bold;
+}
 @media (max-width: 500px) {
   .middle-1 .description {
     width: 100%;
     padding: 5%;
     margin-bottom: 5%;
+  }
+  .middle-1 .description p:nth-of-type(2) {
+    font-style: italic;
+    font-weight: bold;
   }
 }
 .middle-1 .description h3 {
@@ -352,11 +372,13 @@ header .nav-container .nav-link:hover {
 .middle-1 .description p {
   padding-left: 5.25%;
   line-height: 1.15;
+  margin-bottom: 2%;
 }
 @media (max-width: 500px) {
   .middle-1 .description p {
     padding: 8%;
     text-align: justify;
+    margin-bottom: 3%;
   }
 }
 .middle-1 .skills-current {
