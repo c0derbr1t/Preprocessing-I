@@ -1,5 +1,8 @@
 # Preprocessing I: Digital Resume
 
+### Please see my completed project at:
+https://c0derbr1t.github.io/Preprocessing-I/
+
 For this project you will be building a digital resume from scratch. You will be required to use specific preprocessing skills to accomplish your tasks.  
 
 ## Task 1: Set Up The Project With Git
